@@ -1,0 +1,167 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fswiss\fcharset0 Helvetica-Bold;
+\f3\fswiss\fcharset0 Helvetica-Oblique;\f4\fswiss\fcharset0 Helvetica-BoldOblique;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red251\green0\blue7;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c93333;\cssrgb\c100000\c12195\c0;\cssrgb\c0\c1\c1;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid3\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid101\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid102\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid103\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid201\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid202\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid301\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww10440\viewh13640\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 10/4/20\
+AlgoExpert.io Systems Design Fundamentals Notes\
+11- Hashing\
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.algoexpert.io/systems/fundamentals"}}{\fldrslt 
+\f1\fs24 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 https://www.algoexpert.io/systems/fundamentals}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\b \cf0 1) \cf3 Hashing
+\f0\b0 \cf0 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8259 	}transforming a piece of data (ex. string \'93hello\'94, IP address, http request, \'85) into a fixed sized value (usually an integer) such that the same input will ideally yield the same output number\
+{\listtext	\uc0\u8259 	}Ex1.\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1
+\f2\b \cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 say you have 4 clients and 4 servers (a, b, c, d). client 1 sends q request to a load balancer which is using a round robin server selection strategy, so the request gets routed to server A (see pictures 1-2). Server A checks to see if the response is cached, but it isn\'92t so server A caches the response and returns  response back to the client\
+\ls1\ilvl1
+\f2\b {\listtext	\uc0\u8259 	}
+\f0\b0 Then client 1 issues the same request, but with the round robin strategy, served D is chosen. Server D doesn\'92t have the response in its cache either (server A does though). And this is where you get a big problem. \
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls1\ilvl2
+\f2\b \cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 if you design your system so that it relies on in memory caches like the above example. you\'92re doing extra work storing extra caches. Hashing attempts to solve this problem\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8259 	}Ex2 (same setup as above except with hashing)\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1
+\f2\b \cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 client requests are hashed in the load balancer, then depending on the hash output, the request is routed to a consistent server. say we are hashing the clients name (c1, c3, c3, c4) and the hash results are (11, 12, 13, 14)\
+\ls1\ilvl1
+\f2\b {\listtext	\uc0\u8259 	}
+\f3\i\b0 simplest
+\f4\b  
+\f3\b0 hashing strategy would be to modulo each hash result by the number of servers. 
+\f0\i0 This limits result so that no matter how many clients you have, your result will always be bounded by the number of servers. number results from modulo corresponds to a particular server. (see pictures 3)\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\f3\i \cf0 {\listtext	\uc0\u8259 	}
+\f0\i0 a good hashing function would be \ul uniform\ulnone  (evenly distribute hashing values). Don\'92t want all clients being mapped to the same server
+\f3\i \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\f2\i0\b \cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 Usually never write your own hashing function, always use industry accepted one (ex. \ul NP5\ulnone , \ul SHA-1\ulnone , \ul BCrypt\ulnone )\
+{\listtext	\uc0\u8259 	}Ex3\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1
+\f2\b \cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 similar setup except now more servers are added due to increased traffic. Now when we modulo the hashed value of each client name, we get different server numbers than before, which is a problem!
+\f2\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 2) 
+\f2\b \cf3 Consistent Hashing\cf0 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 often used by load balancers to distribute traffic to servers
+\f2\b \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0
+\f0\b0 \cf0 {\listtext	\uc0\u8259 	}Maintains some level of consistency of mappings (hashes to target server buckets) between clients and servers \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0
+\f2\b \cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 minimizes the number of keys that need to be remapped when a hash table gets resized, thus minimizing the number of requests that get forwarded to different servers when new servers are added or when existing servers are brought down. 
+\f2\b \
+{\listtext	\uc0\u8259 	}
+\f0\b0 Ex1. \
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls2\ilvl1
+\f2\b \cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 instead of placing servers on straight line we place them on an abstract circle (not physically placed like this, just easier to demonstrate). \
+\ls2\ilvl1
+\f2\b {\listtext	\uc0\u8259 	}
+\f0\b0 circle represents a bunch of numbers like a clock (but starting at 0 where 12 is)\
+\ls2\ilvl1
+\f2\b {\listtext	\uc0\u8259 	}
+\f0\b0 to place server on circle, run for example server name through hashing function, then depending on the value, you position it on the circle. \
+\ls2\ilvl1
+\f2\b {\listtext	\uc0\u8259 	}
+\f0\b0 to place clients on circle, run (ex client name, IP, request) through hashing function, then you correspondingly position them on the circle. \
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls2\ilvl2
+\f2\b \cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 Then from each client you go to the first server in the clockwise direction (or counter clockwise, but just be consistent). This server will be the server that the clients request will be routed to!\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls2\ilvl1
+\f2\b \cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 Now if say server C dies, c2 gets mapped to server D and all there other clients are mapped to the same servers as previously\
+\ls2\ilvl1
+\f2\b {\listtext	\uc0\u8259 	}
+\f0\b0 only a few mappings change (see pics)\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0
+\f2\b \cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 can distribute traffic even more by hashing all the servers through multiple hashing functions (say server D in picture doesn\'92t get as much traffic- this solves that problem). Servers are \'93placed\'94 multiple times on the circle.\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls2\ilvl1\cf0 {\listtext	\uc0\u8259 	}great if you have a server that\'92s more powerful than others/can handle more traffic, so you could have that server placed multiple times on the circle (see pic 10)
+\f2\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 3) 
+\f2\b \cf3 Rendezvous Hashing \cf4 (highest random weight hashing)\cf0 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0\cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 allows for
+\f3\i  minimal re-distribution of mappings when a server goes down
+\f2\i0\b \
+{\listtext	\uc0\u8259 	}
+\f0\b0 Ex. (see hashing_example.js file)\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls3\ilvl1
+\f2\b \cf0 {\listtext	\uc0\u8259 	}
+\f0\b0 for each client, calculate a ranking for all the server destinations. For now don\'92t worry about how it\'92s ranked. Then choose the highest ranking server to map to. \
+\ls3\ilvl1
+\f2\b {\listtext	\uc0\u8259 	}
+\f0\b0 usually use industry accepted scoring/ranking function
+\f2\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+Questions\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls4\ilvl0
+\f0\b0 \cf0 {\listtext	\uc0\u8259 	}in #3) how are rankings determined?\
+{\listtext	\uc0\u8259 	}why\'92s it called highest 
+\f3\i random 
+\f0\i0 weight hashing?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+	\
+\
+\
+\
+\
+\
+\
+}
