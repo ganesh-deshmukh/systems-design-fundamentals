@@ -1,0 +1,129 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fswiss\fcharset0 Helvetica-Bold;
+\f3\fswiss\fcharset0 Helvetica-Oblique;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red251\green0\blue7;\red25\green60\blue255;
+\red251\green0\blue7;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c93333;\cssrgb\c100000\c12195\c0;\cssrgb\c12594\c35385\c100000;
+\cssrgb\c100000\c12195\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid101\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid201\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid202\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid301\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid401\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid501\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+\margl1440\margr1440\vieww10680\viewh13640\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 10/20/20\
+AlgoExpert.io Systems Design Fundamentals Notes\
+23- MapReduce\
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.algoexpert.io/systems/fundamentals"}}{\fldrslt 
+\f1\fs24 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 https://www.algoexpert.io/systems/fundamentals}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+1)
+\f2\b  \cf3 MapReduce
+\f0\b0 \cf0 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8259 	}\cf4 a very efficient/quick and \cf4 \ul \ulc4 fault-tolerant \cf4 \ulnone way to process large datasets (terabytes) that were stored across thousands of machines\cf0 \
+{\listtext	\uc0\u8259 	}Assume we have a \ul distributed file system
+\f2\b \ulnone \
+{\listtext	\uc0\u8259 	}
+\f0\b0 Map Reduce White Paper (created by google engineers):\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8259 	}inspired by the map and reduce functions of a lot of programming languages (ex. JavaScript)\
+{\listtext	\uc0\u8259 	}MapReduce Job is made of 3 steps (see png 1 diagram):\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}data (yellow) is spread across multiple machines\
+{\listtext	\uc0\u8259 	}1)\ul  \cf5 \ulc5 Map\cf0 \ulc0  Step\ulnone - A map function is run on each of the datasets that transforms the data into key/value pairs. Note that 
+\f3\i all these mapping functions are happening in parallel 
+\f0\i0 \
+{\listtext	\uc0\u8259 	}2) \cf5 \ul \ulc5 Shuffle\cf0 \ulc0  Step\ulnone - reorganizes intermediate \ul key-value pairs\ulnone  such that pairs of the same key are routed to the same machine in the final step\
+{\listtext	\uc0\u8259 	}3) \cf5 \ul \ulc5 Reduce\cf0 \ulc0  Step\ulnone - a reduce function (takes in key/values) is run on the newly shuffled key/value pairs and transforms them into more meaningful data (ex. some file- see blue box)\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8259 	}Map and Reduce Functions are \ul Idempotent\
+\ls1\ilvl0\ulnone {\listtext	\uc0\u8259 	}Example1 of MapReduce\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}counting the number of occurrences of words in a large text file\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8259 	}Example2\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}you had a bunch of youtube videos stored in a dataset, and you had metadata about those videos, and you wanted to get the total number of views or likes per youtube channel. Could use a map reduce job to do this. \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+2)\cf5  Fault-Tolerant\cf0 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8259 	}Fault = ex. network failure\
+{\listtext	\uc0\u8259 	}can handle faults like network failures\
+{\listtext	\uc0\u8259 	}Ex. if there was a network failure at step 1 (map step), the map step would just be repeated\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\b \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 3) 
+\f2\b \cf5 Distributed File System\cf0 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0
+\f0\b0 \cf0 {\listtext	\uc0\u8259 	}a system where data is stored over many machines, but the system abstracts the machines to act like one entity \
+{\listtext	\uc0\u8259 	}Ex. \ul Google File System (GFS)\ulnone , and \ul Hadoop Distributed File System (HDFS)\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls3\ilvl1\cf0 \ulnone {\listtext	\uc0\u8259 	}HDFS supports MapReduce jobs\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 4) Example of MapReduce (see png2)- count the number of occurrences of words in a large text file
+\f2\b \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls4\ilvl0
+\f0\b0 \cf0 {\listtext	\uc0\u8259 	}1)
+\f2\b  
+\f0\b0 map function loops through text file and counts words, outputs key/value like \'91A\'92:2, which means \'91A\'92 appeared twice\
+\ls4\ilvl0
+\f2\b {\listtext	\uc0\u8259 	}
+\f0\b0 2) shuffle step- ex. all of key/value pairs of key \'91A\'92 aggregated in the top right red circle node\
+\ls4\ilvl0
+\f2\b {\listtext	\uc0\u8259 	}
+\f0\b0 3) reduce step- each reduce function (red circle) tallies up all shuffled aggregated key/value pairs, and outputs the final result (Ex. A:5)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 \
+5) code example notes\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls5\ilvl0\cf0 {\listtext	\uc0\u8259 	}host1 and host2 represent 2 different machines and together they would be a distributed file system\
+{\listtext	\uc0\u8259 	}run a map reduce job that counts the total number of latencies (in milliseconds) over 10 seconds, and latencies under 10 seconds. (latencies could be network request latency obtained from a logger)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\b \cf0 \
+Questions\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls6\ilvl0
+\f0\b0 \cf0 {\listtext	\uc0\u8259 	}is the map function the same that\'92s applied to all datasets?\
+{\listtext	\uc0\u8259 	}why does reduce step in example group B and C into one output?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+}
