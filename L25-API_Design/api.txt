@@ -1,0 +1,45 @@
+# API DEFINITION
+
+## Entity Definitions
+### Charge:
+- id: uuid
+- customer_id: uuid
+- amount: integer
+- currency: string (or currency-code num)
+- status: enum ["succeeded], "pending", "failed]
+
+### Customers
+- id: uuid
+- name: string
+- address: string- email: string
+- card: Card
+
+### Card
+left this blank bec. there could be alot of fields
+
+## Endpoint Definitions (classic CRUD)
+CreateCharge(charge: Charge)    <- stuff in parens are parameters (data sent to server)
+  => Charge                     <- return value to client of API
+GetCharge(id: uuid)
+  => Charge
+UpdateCharge(id: uuid, updatedCharge: Charge)
+  => Charge
+ListCharges(offset: integer, limit: integer)
+  => Charge[]
+CaptureCharge(id: uuid)
+  => Charge
+
+
+### Customeres
+CreateCusomter(customer: Customer)
+  => Customer
+GetCusomter(id: uuid)
+  => Cusomter
+UpdateCusomter(id: uuid, updatedCusomter: Customer)
+  => Cusomter
+DeleteCusomter(id: uuid)
+  => Cusomter
+ListCustomers(offset: integer, limit: integer)
+  => Customer[]
+
+
